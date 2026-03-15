@@ -13,6 +13,7 @@ e = ["move_prev_word_end", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
 x = ["delete_selection"]
 d.d = ["extend_to_line_bounds", "delete_selection"]
+d.j = ["extend_to_line_bounds", "yank", "collapse_selection", "move_line_down", "paste_before"]
 "C-h" = ["goto_previous_buffer"]
 "C-l" = ["goto_next_buffer"]
 
