@@ -10,10 +10,12 @@
         "niri/workspaces",
         "cpu",
         "memory",
-        "network"
+        "network",
+        "custom/media-prev",
+        "custom/media-play",
+        "custom/media-next"
     ],
     "modules-center": [
-        "wifi",
         "clock"
     ],
     "modules-right": [
@@ -34,7 +36,7 @@
     },
     "clock": {
         "format": "{:%a %d, %I:%M %p}",
-	"tooltip": false
+        "tooltip": false
     },
     "cpu": {
         "format": "󰻠 {usage}%",
@@ -59,14 +61,11 @@
             "critical": 10
         }
     },
-    "wifi" : {
-        "format": "󰖩 " 
-    },
     "network": {
-        "format-wifi" : "󰖩 connected",
-        "format-ethernet": "󰈀 connected", 
-        "format-disconnected" : "󰖪 disconnected",
-	"tooltip": false
+        "format-wifi": "󰖩 connected",
+        "format-ethernet": "󰈀 connected",
+        "format-disconnected": "󰖪 disconnected",
+        "tooltip": false
     },
     "backlight": {
         "device": "intel_backlight",
@@ -92,9 +91,26 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
+    "custom/media-prev": {
+        "format": "󰒮",
+        "on-click": "playerctl previous",
+        "tooltip": false
+    },
+    "custom/media-play": {
+        "exec": "playerctl status 2>/dev/null | grep -q Playing && echo '󰏤' || echo '󰐊'",
+        "exec-if": "playerctl status 2>/dev/null",
+        "interval": 2,
+        "on-click": "playerctl play-pause",
+        "tooltip": false
+    },
+    "custom/media-next": {
+        "format": "󰒭",
+        "on-click": "playerctl next",
+        "tooltip": false
+    },
     "custom/power": {
         "format": "⏻",
         "on-click": "systemctl poweroff",
         "tooltip": false
-    },
+    }
 }

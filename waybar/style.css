@@ -7,18 +7,14 @@
     font-size: 16px;
     padding: 0;
 }
-
 window#waybar {
     background: #1e1e2e;
     border-bottom: 2px solid #45475a;
 }
-
 tooltip {
     background-color: #1e1e2e;
     border: 2px solid #6c7086;
 }
-
-#wifi,
 #clock,
 #tray,
 #cpu,
@@ -30,13 +26,11 @@ tooltip {
     margin: 3px 6px 6px 0px;
     padding: 2px 8px;
 }
-
 #workspaces {
     background-color: #313244;
     margin: 3px 6px 6px 0px;
     border: 1px solid #45475a;
 }
-
 #workspaces button {
     all: initial;
     min-width: 0;
@@ -44,28 +38,23 @@ tooltip {
     padding: 2px 4px;
     color: #6c7086;
 }
-
 #workspaces button.focused {
     color: #cdd6f4;
 }
-
 #workspaces button.urgent {
     background-color: #f38ba8;
     color: #1e1e2e;
 }
-
 #clock {
     background-color: #313244;
     border: 2px solid #45475a;
     color: #cdd6f4;
 }
-
 #battery {
     background-color: #45475a;
     border: 2px solid #6c7086;
     color: #a6e3a1;
 }
-
 #backlight {
     background-color: #45475a;
     border: 2px solid #6c7086;
@@ -73,25 +62,21 @@ tooltip {
     margin: 3px 6px 6px 0px;
     padding: 2px 8px;
 }
-
 #tray,
 #cpu,
 #memory,
 #network,
-#pulseaudio,
-#wifi{
+#pulseaudio {
     background-color: #45475a;
     border: 2px solid #6c7086;
     color: #89b4fa;
 }
-
 #cpu.critical,
 #memory.critical {
     background-color: #45475a;
     border: 2px solid #6c7086;
     color: #f38ba8;
 }
-
 #battery.warning,
 #battery.critical,
 #battery.urgent {
@@ -106,8 +91,26 @@ tooltip {
     margin: 3px 6px 6px 0px;
     padding: 2px 10px;
 }
-
 #custom-power:hover {
     background-color: #f38ba8;
     color: #1e1e2e;
+}
+#custom-media-prev,
+#custom-media-play,
+#custom-media-next {
+    background-color: #45475a;
+    border: 2px solid #6c7086;
+    color: #cba6f7;
+    margin: 3px 3px 6px 3px;
+    padding: 2px 8px;
+    font-size: 18px;
+}
+#custom-media-prev:hover,
+#custom-media-play:hover,
+#custom-media-next:hover {
+    background-color: #585b70;
+    color: #d0a9f5;
+}
+#custom-media-prev {
+    margin-left: 0;
 }
