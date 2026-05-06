@@ -131,8 +131,8 @@ binds {
     //apps
     Mod+N { spawn "wofi" "--show" "drun"; }
     Mod+B hotkey-overlay-title="Spawn Helium" { spawn "/home/blitz/.local/bin/helium"; }
-    Mod+P hotkey-overlay-title="Spawn HTTPie" { spawn "appimage-run" "/home/blitz/Downloads/HTTPie-2025.2.0.AppImage" "--ozone-platform=wayland"; }
-    Mod+M { spawn "nautilius"; }
+    Mod+P hotkey-overlay-title="Spawn HTTPie" { spawn "appimage-run" "/home/blitz/Downloads/HTTPie-2025.2.0.AppImage" "--ozone-platform=wayland" "--disable-gpu"; }
+    Mod+M { spawn "dolphin"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
