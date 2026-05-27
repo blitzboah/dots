@@ -7,4 +7,10 @@
       "g e": "vim::EndOfDocument",
     },
   },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "Ctrl [": "vim::NormalBefore",
+    },
+  },
 ]
