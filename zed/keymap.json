@@ -5,12 +5,28 @@
       "g h": "vim::FirstNonWhitespace",
       "g l": "vim::EndOfLine",
       "g e": "vim::EndOfDocument",
+      "Ctrl-l": "pane::ActivateNextItem",
+      "Ctrl-h": "pane::ActivatePreviousItem",
     },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "Ctrl [": "vim::NormalBefore",
+      "Ctrl-[": "vim::NormalBefore",
+      "Ctrl-l": "pane::ActivateNextItem",
+      "Ctrl-h": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-j": "terminal_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "BufferSearchBar",
+    "unbind": {
+      "ctrl-h": "search::ToggleReplace",
     },
   },
 ]

@@ -1,4 +1,18 @@
 {
+  "cli_default_open_behavior": "new_window",
+  "disable_ai": false,
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "terminal": {
     "working_directory": {
       "always": {
@@ -10,19 +24,61 @@
     },
   },
   "agent": {
-    "default_profile": "write",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cd\\s+/home/blitz/sandbox/gd(\\s|$)",
+            },
+            {
+              "pattern": "^zig\\s+build(\\s|$)",
+            },
+            {
+              "pattern": "^head\\b",
+            },
+          ],
+        },
+      },
+    },
+    "dock": "right",
+    "default_profile": "ask",
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "model": "gpt-5.3-codex",
     },
     "model_parameters": [],
   },
   "vim_mode": true,
+  "relative_line_numbers": "enabled",
   "ui_font_size": 15,
-  "buffer_font_size": 14,
+  "buffer_font_size": 13,
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
+  },
+
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "OpenCode": {
+      "type": "custom",
+      "command": "opencode",
+      "args": ["acp"],
+    },
+  },
+
+  "show_edit_predictions": true,
+
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+
+  "tabs": {
+    "git_status": true,
   },
 }

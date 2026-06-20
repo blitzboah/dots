@@ -2,10 +2,10 @@ background = 282c34
 background-opacity = 0.85
 
 font-family = "JetBrains Mono"
-font-size = 14
+font-size = 13
 
 theme = Catppuccin Mocha
 
 window-width = 120
-window-height = 40
+window-height = 50
 window-decoration = false
